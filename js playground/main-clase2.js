@@ -60,10 +60,8 @@ var suma4 = 0;
 
 for (let index = 0; index < limite4; index++) {
     
-
-    suma4 = num1 + num2;
-    
     console.log(num2);
+    suma4 = num1 + num2;
 
     if(num2 === 0){
         num2 = 1;
@@ -72,5 +70,4 @@ for (let index = 0; index < limite4; index++) {
         num1 = num2;
         num2 = suma4;
     }
-
 }
