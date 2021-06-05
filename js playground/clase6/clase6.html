@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Playground 6</title>
+</head>
+<body>
+    <h1>Javascript Coderhood Playground</h1>
+    <h1>6. Manejo de Errores</h1>
+    <br>
+
+    <h3>1) Funcion de errores</h3>
+    <p>
+        Crear una funcion que recibe tres parametros chance, mensaje y resultado.
+        <ul>
+            <li>chance: es un numero que indica el porcentaje que tiene esa funcion de arrojar un error.
+                si chance = 20 entonces la funcion tiene 20% de posibilidades de disparar un error</li>
+            <li>mensaje: el mensaje que tiene que tener el error que puede disparar la funcion</li>
+            <li>resultado: es cualquier cosa, un numero, un texto, un objeto, etc. es lo que retorna la
+                funcion si no arrojo un error</li>
+        </ul>
+    </p>
+    <br>
+
+    <h3>2) Simulador de descarga de informacion</h3>
+    <p>
+        Cuando queremos descargar informacion de internet, varias cosas pueden ir mal:
+        desconexion de internet, corte de luz, perdida de informacion por culpa de seres
+        desconocidos. Crear una funcion llamada pedirInformacion que no recibe parametros y
+        que devuelve el siguiente objeto que corresponde a los datos de un usuario: let persona =
+        { id: 19310, nombre: "Bautista", apellido: "Di Santo" }
+    </p>
+    <p>
+        La funcion pedirInformacion tiene:
+        <ul>
+            <li>25% de posibilidades de disparar un error por desconexion de internet, el nombre del
+                error es 'NetworkError'</li>
+            <li>18% de posibilidades de disparar un error por error del servidor, el nombre del error es
+                'InternalError'</li>
+            <li>10% de posibilidades de disparar un error por una anomalia, el nombre del error es
+                'AlienError'</li>
+        </ul>
+    </p>
+    <p>
+        Cuando se llame a la funcion, informar:
+        <ul>
+            <li>Si hubo un error, informar segun el mensaje del error:
+                <ul>
+                    <li>NetworkError => informar "Hubo un problema en la conexion de internet"</li>
+                    <li>InternalError => informar "Hubo un error interno en el el servidor"</li>
+                    <li>AlienError => informar "Una anomalia intercepto la informacion"</li>
+                </ul>
+            </li>
+            <li>Si no hubo un error, informar el objeto persona</li>
+        </ul>
+    </p>
+
+    <br>
+    <h3>3) Descarga de informacion prohibida</h3>
+    <p>Crear una funcion llamada pedirUsuario que retorna un usuario al azar de la siguiente
+        lista:let lista = [{
+            id: 19310,
+            nombre: "Bautista",
+           },{
+            id: 90010,
+            nombre: "Ema",
+           },{
+            id: 00519,
+            nombre: "Lucas",
+           },{
+            id: 00000,
+            nombre: "Meison",
+           }
+           ]
+        </p>
+        <p>
+            La funcion pedirUsuario disparar un error llamado 'ForbiddenInformation' si el usuario
+            elegido es el del id = 00000
+            Llamar a la funcion pedirUsuario dentro de la funcion pedirInformacion para cambiar el
+            retorno de la funcion pedirInformacion.
+            Considerar que la funcion pedirInformacion ahora tiene que capturar un error, cuando la
+            capture debe disparar un error 'NetworkError'.
+        </p>
+
+        <!-- Ejemplo:
+            function pedirUsuario(){
+            // puede disparar un error, devuelve un usuario
+            }
+            function pedirInformacion(){
+            let usuario = pedirUsuario(); // considerar 'pedirUsuario' p
+            // el resto de la funcion
+            return usuario;
+            } -->
+
+    <script src="main-clase6.js"></script>
+</body>
+</html>
