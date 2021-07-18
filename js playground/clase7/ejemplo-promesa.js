@@ -1,6 +1,3 @@
-
-
-
 function sleep(milisegundos){
     return new Promise((resolve, reject)=>{
         if(milisegundos < 5000){

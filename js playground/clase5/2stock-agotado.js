@@ -1,4 +1,5 @@
-//agregar propiedad agotado a cada objeto con el valor true si el stock es 0 o false si no lo es
+//crear una funcion que agregue la propiedad "agotado" a cada objeto 
+//con el valor true si el stock es 0 o false si no lo es
 const productos = [
     { id: "1", nombre: "lapiceras", stock: 164 },
     { id: "2", nombre: "marcadores", stock: 0 },
